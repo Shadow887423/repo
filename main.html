@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"><img src="logo.png" alt="Company Logo"></div>
+            <div class="nav-links">
+                <a href="main.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="main.html">Products</a>
+                <a href="comparisonpage.html">Comparison</a>
+                <div class="profile-container">
+                    <img id="profile-pic" src="placeholder-profile.png" alt="User Profile Picture" class="profile-img">
+                    <div id="dropdown-menu" class="dropdown">
+                        <button id="profile-btn">Profile</button>
+                        <button id="settings-btn">Settings</button>
+                        <button id="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Profile Modal -->
+        <div class="modal" id="profile-modal">
+            <div class="modal-content">
+                <h2>Profile</h2>
+                <label for="name">Change Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="profile-pic-upload">Change Profile Picture:</label>
+                <input type="file" id="profile-pic-upload" accept="image/*">
+                <div>
+                    <button class="save-btn" id="profile-save-btn">Save</button>
+                    <button class="close-btn" id="close-profile-modal">Close</button>
+                </div>
+            </div>
+        </div>
+<!--Settings Modal-->
+<div class="modal" id="settings-modal">
+    <div class="modal-content">
+        <h2>Settings</h2>
+        
+        <!-- Old Password -->
+        <label for="old-password">Old Password:</label>
+        <input type="password" id="old-password" placeholder="Enter your old password">
+
+        <!-- New Password -->
+        <label for="password">New Password:</label>
+        <input type="password" id="password" placeholder="Enter new password">
+
+        <!-- Confirm New Password -->
+        <label for="confirm-password">Confirm New Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confirm new password">
+
+        <div>
+            <!-- Save Changes Button -->
+            <button class="save-btn" id="settings-save-btn">Save</button>
+            <!-- Close Button -->
+            <button class="close-btn" id="close-settings-modal">Close</button>
+        </div>
+    </div>
+</div>
+        <section class="hero-section">
+            <h1>RG Tech</h1>
+            <p>Test your gaming desires</p>
+        </section>
+        <form class="search-bar" action="#" method="GET" onsubmit="searchProducts(event)">
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+            <button type="submit">SEARCH</button>
+        </form>
+        <!-- Products Section -->
+        <section id="products" class="hero-section">
+            <h2 class="names">Products (Phones)</h2>
+            <div class="slideshow-container">
+                <div class="slide" id="product-list">
+                    <div class="image-card" data-name="Infinix ZERO Flip">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/infinix-zero-flip-5g">
+                            <img src="https://gadgetsuite.net/wp-content/uploads/2024/10/Infinix-Zero-Flip.webp" alt="Infinix ZERO Flip">
+                            <span class="badge">New</span>
+                            <p>Infinix ZERO Flip</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/infinix-zero-40-5g">
+                            <img src="https://cdn-files.kimovil.com/default/0010/73/thumb_972381_default_big.jpg" alt="Infinix ZERO 40 5G">
+                            <span class="badge">New</span>
+                            <p>Infinix ZERO 40 5G</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/vivo-y19s">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9a8VQkyza98L-eJdsVreULniyLRy6munfTA&s" alt="Vivo Y19s">
+                            <span class="badge">New</span>
+                            <p>Vivo Y19s</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.pinoytechnoguide.com/smartphones/samsung-galaxy-a16-5g">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/ph/feature/165631277/ph-feature-galaxy-a16-5g-sm-a166-544207108?$550_N_JPG$" alt="Samsung Galaxy A16">
+                            <span class="badge">New</span>
+                            <p>Samsung Galaxy A16</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.gsmarena.com/itel_s25_ultra-13504.php">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF2oHD4Nk37cN_CG_mCM0EwIlBKIlWguLI1g&s" alt="itel S25 Ultra">
+                            <span class="badge">New</span>
+                            <p>itel S25 Ultra</p>
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.gsmarena.com/infinix_note_40s-13460.php">
+                            <img src="https://www.greentelcom.ph/wp-content/uploads/2024/04/website-template-2024-04-29T164739.548.png" alt="Infinix NOTE 40s">
+                            <span class="badge">New</span>
+                            <p>Infinix NOTE 40s</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation arrows for slideshow -->
+                <button class="prev1">&#10094;</button>
+                <button class="next1">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Second Products Section (Laptops) -->
+        <section id="products2" class="hero-section">
+            <h2 class="names">Products (Laptops)</h2>
+            <div class="slideshow-container">
+                <div class="slide2">
+                    <div class="image-card2">
+                        <a href="https://www.laptopmag.com/laptops/acer-swift-go-14-intel-core-ultra-review">
+                            <img src="https://m.media-amazon.com/images/I/71thf1SYnGL._AC_UF894,1000_QL80_.jpg" alt="MacBook Air">
+                            <span class="badge">New</span>
+                            <p>MacBook Air</p>
+                        </a>
+                    </div>
+                    <div class="image-card2">
+                        <a href="https://www.laptopmag.com/laptops/macbooks/macbook-air-13-inch-m3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ02qw2QNx9g3MjXHnDd8t_3fLzxdRl4I1Z0A&s" alt="Acer Swift Go 14">
+                            <span class="badge">New</span>
+                            <p>Acer Swift Go 14</p>
+                        </a>
+                    </div>
+                    <div class="image-card2">
+                        <a href="https://www.laptopmag.com/laptops/windows-laptops/asus-zenbook-14-oled-2024-review">
+                            <img src="https://i.pcmag.com/imagery/reviews/075bmVhnXs6BUHpdXkVt9xo-1..v1708616444.jpg" alt="Asus Zenbook 14 OLED">
+                            <span class="badge">New</span>
+                            <p>Asus Zenbook 14 OLED</p>
+                        </a>
+                    </div>
+                    <div class="image-card2">
+                        <a href="https://www.pcworld.com/article/2493146/asus-zenbook-s-14-review.html">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgVJmvJghz_NAoLmw-t1Jz4Qxjh1RK2DC2eg&s" alt="Asus Zenbook S 14">
+                            <span class="badge">New</span>
+                            <p>Asus Zenbook S 14</p>
+                        </a>
+                    </div>
+                    <div class="image-card2">
+                        <a href="https://www.pcworld.com/article/532073/mbp_benchmark.html">
+                            <img src="https://www.cnet.com/a/img/resize/744ffe800ebfcf37a46faba935674ae68403efa0/hub/2021/10/23/80425069-0d3e-4c67-9085-a66e6177fc60/macbook-pro-2021-cnet-review-12.jpg?auto=webp&width=1200" alt="MacBook Pro">
+                            <span class="badge">New</span>
+                            <p>MacBook Pro</p>
+                        </a>
+                    </div>
+                    <div class="image-card2">
+                        <a href="https://www.pcmag.com/reviews/lenovo-legion-pro-7i-gen-9-16">
+                            <img src="https://m.media-amazon.com/images/I/51AZvA-T5IL._AC_UF894,1000_QL80_.jpg" alt="Lenovo Legion Pro 7i (Gen 9)">
+                            <span class="badge">New</span>
+                            <p>Lenovo Legion Pro 7i (Gen 9)</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation arrows for slideshow -->
+                <button class="prev2">&#10094;</button>
+                <button class="next2">&#10095;</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+
+</body>
+</html>

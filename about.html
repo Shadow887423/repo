@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"><img src="logo.png" alt="Company Logo"></div>
+            <div class="nav-links">
+                <a href="main.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="main.html">Products</a>
+                <a href="comparisonpage.html">Comparison</a>
+                <div class="profile-container">
+                    <img id="profile-pic" src="placeholder-profile.png" alt="User Profile Picture" class="profile-img">
+                    <div id="dropdown-menu" class="dropdown">
+                        <button id="profile-btn">Profile</button>
+                        <button id="settings-btn">Settings</button>
+                        <button id="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Profile Modal -->
+        <div class="modal" id="profile-modal">
+            <div class="modal-content">
+                <h2>Profile</h2>
+                <label for="name">Change Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="profile-pic-upload">Change Profile Picture:</label>
+                <input type="file" id="profile-pic-upload" accept="image/*">
+                <div>
+                    <button class="save-btn" id="profile-save-btn">Save</button>
+                    <button class="close-btn" id="close-profile-modal">Close</button>
+                </div>
+            </div>
+        </div>
+<!--Settings Modal-->
+<div class="modal" id="settings-modal">
+    <div class="modal-content">
+        <h2>Settings</h2>
+        
+        <!-- Old Password -->
+        <label for="old-password">Old Password:</label>
+        <input type="password" id="old-password" placeholder="Enter your old password">
+
+        <!-- New Password -->
+        <label for="password">New Password:</label>
+        <input type="password" id="password" placeholder="Enter new password">
+
+        <!-- Confirm New Password -->
+        <label for="confirm-password">Confirm New Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confirm new password">
+
+        <div>
+            <!-- Save Changes Button -->
+            <button class="save-btn" id="settings-save-btn">Save</button>
+            <!-- Close Button -->
+            <button class="close-btn" id="close-settings-modal">Close</button>
+        </div>
+    </div>
+</div>
+        <!-- Creators Section -->
+        <h1 style="text-align: center; margin-top: 40px;">Creators</h1>
+        <div class="creators-container">
+            <!-- Creator 1 -->
+            <div class="creator">
+                <a href="https://web.facebook.com/louisse.mercado" target="_blank">
+                    <img src="hector.jpg" alt="Hector Mercado">
+                </a>
+                <p>Hector Mercado</p>
+            </div>
+
+            <!-- Creator 2 -->
+            <div class="creator">
+                <a href="https://www.facebook.com/profile.php?id=100011381745076" target="_blank">
+                    <img src="me.jpg" alt="Paulo Ugbinar">
+                </a>
+                <p>Paulo Ugbinar</p>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info" style="text-align: center; margin-top: 40px; padding: 0 20px;">
+            <p>
+                We created this website to serve as a reliable platform for users who are 
+                seeking comprehensive updates and detailed reviews on the specific devices 
+                they are interested in. Our purpose is to ensure that users have access to 
+                accurate and up-to-date information, empowering them to make well-informed 
+                decisions when choosing a device. By offering insights, comparisons, and 
+                feedback, we aim to simplify the research process and provide a 
+                trustworthy resource for anyone looking to learn more about the latest 
+                technologies and products in the market.
+            </p>
+        </div>
+
+        <!-- Contact Info -->
+        <section id="contact" class="section" style="text-align: center; margin-top: 40px;">
+            <h2>Contact Information</h2>
+            <p>Address: 123 Tech Street, Innovation City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@yourcompany.com</p>    
+        </section>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

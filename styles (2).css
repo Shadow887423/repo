@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #213A58;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: ;
+    margin-top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #0C6478;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.navbar a {
+    background-color: #15919b;
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-section {
+    margin-bottom: 1rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #FFD700;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #DAA520;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0px auto;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #0C6478;
+    padding: 20px 0;
+  }
+  
+  /* Slide wrapper */
+  .slide {
+    display: flex;
+    background-color: #0C6478;
+    margin-top: 0px;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Image cards */
+  .image-card {
+    position: relative;
+    text-align: center;
+    width: 150px;
+    flex-shrink: 0; /* Prevent the card from shrinking */
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .image-card .badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  
+  .image-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+  }
+   
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+.navbar div a {
+    display: inline-block; /* Makes the links inline */
+    margin-right: 10px; /* Adds some space between the links */
+}
+.section {
+    padding: 4rem 2rem;
+}
+
+.section h2 {
+    color: #39FF14;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #112244;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.contact form, .inquiry form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-button {
+    background: #39FF14;
+    color: #000;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn, .register-btn {
+    background: #39FF14;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* container/table */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  
+td>img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+  /* Style table headers and table data */
+  th, td {
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  th:first-child, td:first-child {
+    text-align: left;
+  }
+  
+  /* Zebra-striped table rows */
+  tr:nth-child(even) {
+    background-color: #54545465;
+    color: white;
+  }
+  
+  .form-control {
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    width: 100%;
+    padding: 8px;
+  }
